@@ -42,7 +42,7 @@ Cette section détaille la configuration d'un environnement de développement de
 ### Installation
 
 ```console
-> git clone https://github.com/Ylizioops/HorizonLauncher.git
+> git clone https://github.com/Skycun/HorizonLauncher.git
 > cd HorizonLauncher
 > npm install
 ```

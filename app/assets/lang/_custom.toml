@@ -4,10 +4,6 @@
 title = "Horizon Launcher"
 
 [ejs.landing]
-mediaGitHubURL = "https://github.com/HorizonStudioFR/HorizonLauncher"
-mediaXURL = "#"
-mediaInstagramURL = "#"
-mediaYouTubeURL = "#"
 mediaDiscordURL = "https://discord.com/channels/1366100936207892540/1366317650178736178"
 
 [ejs.settings]

@@ -5,9 +5,9 @@
   "description": "Launcher de Horizon RP",
   "author": "Daniel Scalzi (https://github.com/dscalzi/) et Ylizioo",
   "license": "UNLICENSED",
-  "homepage": "https://github.com/Ylizioops/HorizonLauncher",
+  "homepage": "https://github.com/HorizonStudioFR/HorizonLauncher",
   "bugs": {
-    "url": "https://github.com/Ylizioops/HorizonLauncher/issues"
+    "url": "https://github.com/HorizonStudioFR/HorizonLauncher/issues"
   },
   "private": true,
   "main": "index.js",
@@ -47,6 +47,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Ylizioops/HorizonLauncher.git"
+    "url": "git+https://github.com/HorizonStudioFR/HorizonLauncher.git"
   }
 }

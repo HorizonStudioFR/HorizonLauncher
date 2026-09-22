@@ -37,8 +37,12 @@ mac:
   category: 'public.app-category.games'
 
 # Linux Configuration
-linux: 
-  target: 'AppImage'
+linux:
+  target:
+    - target: 'AppImage'
+      arch: ['x64']
+    - target: 'deb'
+      arch: ['x64']
   maintainer: 'Daniel Scalzi'
   vendor: 'Daniel Scalzi'
   synopsis: 'Modded Minecraft Launcher'

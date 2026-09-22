@@ -4,15 +4,15 @@
 title = "Horizon Launcher"
 
 [ejs.landing]
-mediaGitHubURL = "https://github.com/Ylizioops/HorizonLauncher"
+mediaGitHubURL = "https://github.com/HorizonStudioFR/HorizonLauncher"
 mediaXURL = "#"
 mediaInstagramURL = "#"
 mediaYouTubeURL = "#"
 mediaDiscordURL = "https://discord.com/channels/1366100936207892540/1366317650178736178"
 
 [ejs.settings]
-sourceGithubLink = "https://github.com/Ylizioops/HorizonLauncher"
-supportLink = "https://github.com/Ylizioops/HorizonLauncher/issues"
+sourceGithubLink = "https://github.com/HorizonStudioFR/HorizonLauncher"
+supportLink = "https://github.com/HorizonStudioFR/HorizonLauncher/issues"
 
 [ejs.welcome]
 welcomeHeader = "BIENVENUE SUR HORIZON"

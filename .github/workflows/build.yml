@@ -1,6 +1,10 @@
 name: Build
 
-on: push
+on:
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch: {}
 
 jobs:
   release:
@@ -31,8 +35,8 @@ jobs:
         run: npm ci
         shell: bash
 
-      - name: Build
+      - name: Build and publish
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: npm run dist
+        run: npx electron-builder build --publish always
         shell: bash

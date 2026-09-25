@@ -2,9 +2,12 @@
 
 <h1 align="center">Horizon Launcher</h1>
 
-<p align="center">Le launcher officiel pour le serveur Minecraft Roleplay <strong>Horizon RP</strong>.</p>
+<p align="center">Le launcher officiel du serveur Minecraft roleplay <strong>Horizon RP</strong>.</p>
 
 <p align="center">
+    <a href="https://github.com/HorizonStudioFR/HorizonLauncher/releases/latest">
+        <img src="https://img.shields.io/github/v/release/HorizonStudioFR/HorizonLauncher?style=for-the-badge&label=T%C3%A9l%C3%A9charger" alt="Télécharger">
+    </a>
     <a href="https://discord.gg/invite/wFavYrCyKj">
         <img src="https://img.shields.io/badge/Discord-Horizon%20RP-7289da.svg?style=for-the-badge&logo=discord" alt="Discord">
     </a>
@@ -12,71 +15,57 @@
 
 ---
 
-Horizon Launcher est conçu pour offrir une expérience simplifiée aux joueurs d'Horizon RP. Rejoignez notre serveur sans vous soucier de l'installation de Java, de Forge ou des mods : nous nous occupons de tout pour vous.
+Rejoignez Horizon RP sans rien installer à la main : le launcher s'occupe de Java, de Forge, des mods et de leurs mises à jour.
+
+## Installer
+
+Téléchargez l'installeur de votre système dans la **[dernière release](https://github.com/HorizonStudioFR/HorizonLauncher/releases/latest)** :
+
+| Système | Fichier |
+|---|---|
+| Windows | `Horizon-Launcher-setup-<version>.exe` |
+| macOS (Apple Silicon) | `Horizon-Launcher-setup-<version>-arm64.dmg` |
+| macOS (Intel) | `Horizon-Launcher-setup-<version>-x64.dmg` |
+| Linux | `.AppImage` ou `.deb` |
+
+Lancez-le, connectez-vous avec votre compte Microsoft, puis cliquez sur **Jouer**. Le premier lancement télécharge le jeu et ses mods ; les suivants ne récupèrent que ce qui a changé. Le launcher se met ensuite à jour tout seul.
 
 ## Fonctionnalités
 
-* 🔒 **Gestion complète des comptes.**
-  * Ajoutez plusieurs comptes et passez de l'un à l'autre facilement.
-  * Support complet de l'authentification Microsoft (OAuth 2.0).
-  * Les identifiants ne sont jamais stockés et sont transmis directement aux serveurs officiels.
-* 📂 **Gestion efficace des ressources.**
-  * Recevez les mises à jour du client dès qu'elles sont publiées.
-  * Les fichiers sont validés avant chaque lancement. Les fichiers corrompus ou manquants sont retéléchargés automatiquement.
-* ☕ **Validation automatique de Java.**
-  * Si votre version de Java est incompatible, le launcher installe la bonne version *pour vous*.
-  * Vous n'avez pas besoin d'avoir Java installé au préalable pour utiliser le launcher.
-* ⚙️ **Paramètres intuitifs.**
-  * Gérez facilement l'allocation de RAM et les options JVM.
-* 🚀 **Mises à jour automatiques.**
-  * Le launcher se met à jour tout seul pour vous garantir la meilleure expérience.
+* 🔒 **Comptes** : plusieurs comptes Microsoft (OAuth 2.0) ; les identifiants ne sont jamais stockés et vont directement aux serveurs officiels.
+* 📂 **Fichiers vérifiés** : chaque fichier est contrôlé avant le lancement ; un fichier corrompu ou manquant est retéléchargé.
+* ☕ **Java automatique** : la bonne version de Java est installée pour vous si besoin.
+* ⚙️ **Réglages** : mémoire allouée et options JVM.
+* 🚀 **Mises à jour automatiques** du launcher et du contenu du serveur.
 
 ## Développement
 
-Cette section détaille la configuration d'un environnement de développement de base.
-
-### Prérequis
-
-* [Node.js](https://nodejs.org/en/) v22
-
-### Installation
+**Prérequis** : [Node.js](https://nodejs.org/) 22.
 
 ```console
-> git clone https://github.com/HorizonStudioFR/HorizonLauncher.git
-> cd HorizonLauncher
-> npm install
+git clone https://github.com/HorizonStudioFR/HorizonLauncher.git
+cd HorizonLauncher
+npm install
+npm start          # lance l'application en mode développement
 ```
 
-### Lancer l'application
+Compiler les installeurs :
 
-```console
-> npm start
-```
+| Plateforme | Commande |
+|---|---|
+| Plateforme actuelle | `npm run dist` |
+| Windows x64 | `npm run dist:win` |
+| macOS | `npm run dist:mac` |
+| Linux x64 | `npm run dist:linux` |
 
-### Compiler les installeurs
+**Publier une version** : mettre à jour `version` dans `package.json`, puis pousser un tag `vX.Y.Z` ; la CI (`.github/workflows/build.yml`) construit les installeurs Windows, macOS et Linux et les joint à la release, avec les fichiers de mise à jour automatique (`latest*.yml`).
 
-Pour votre plateforme actuelle :
+Le contenu du serveur (mods, configurations) est décrit par un index `distribution.json` dont l'adresse est définie dans `app/assets/js/distromanager.js` (`REMOTE_DISTRO_URL`).
 
-```console
-> npm run dist
-```
+## Crédits
 
-Pour une plateforme spécifique :
-
-| Plateforme  | Commande             |
-| ----------- | -------------------- |
-| Windows x64 | `npm run dist:win`   |
-| macOS       | `npm run dist:mac`   |
-| Linux x64   | `npm run dist:linux` |
-
----
-
-## Crédits & Remerciements
-
-Ce projet est un fork de [Helios Launcher](https://github.com/dscalzi/HeliosLauncher) développé par Daniel Scalzi. Nous tenons à le remercier pour son travail remarquable sur la base de ce launcher.
+Fork de [Helios Launcher](https://github.com/dscalzi/HeliosLauncher) de Daniel Scalzi, sous licence MIT. Merci à lui pour cette base remarquable.
 
 ## Communauté
 
-Rejoignez-nous sur Discord pour obtenir de l'aide, suivre les annonces et participer à la vie du serveur :
-
-👉 **[Discord Horizon RP](https://discord.gg/invite/wFavYrCyKj)**
+Aide, annonces et vie du serveur : **[Discord Horizon RP](https://discord.gg/invite/wFavYrCyKj)**.
